@@ -8,7 +8,7 @@ namespace WSDLToTypescriptProxy.Infras
         {
             parsedArgs = new Dictionary<ArgType, string>();
 
-            if (args.Length != 1 && args.Length != 3 && args[1] != "/o")
+            if (args.Length == 0 || (args.Length != 1 && args.Length != 3 && args[1] != "/o"))
                 return false;
 
             var remoteUri = string.Empty;
